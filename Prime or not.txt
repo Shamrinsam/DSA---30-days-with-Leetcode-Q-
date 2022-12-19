@@ -1,0 +1,55 @@
+import java.util.*;
+  
+
+ //Main is the class
+  public class Main{
+  
+
+  //Method is main
+  public static void main(String[] args) {
+
+  //standard input to read inputs from the system
+      Scanner scn = new Scanner(System.in);
+
+  //taken a number t as input for testcases
+         int t = scn.nextInt();
+
+    //here  intialised with 0 , checked until all test cases t and increment
+          for (int i = 0; i < t; i++){
+
+     //taken a nmber n as input
+            int n = scn.nextInt();
+             
+     //numbers will start counting from 0
+             int count = 0;
+
+      /*from 0 to each num if div 2 , div num * div itself num until
+              n or less than n and then it will start incement
+
+             */
+            for (int div = 2; div*div <= n; div++ ){
+
+   // if n num diviser is 0 then count will increaseand will break
+          if (n % div == 0){
+            count ++;
+            break;
+          }
+            }
+    //if count is equal to 0 then it's a prime num
+                if (count == 0){
+                     System.out.println("prime");
+
+                }else{
+
+   //is count is not equal to 0 then it is not prime
+                  System.out.println("not prime");
+                }
+              }
+
+      }    
+  }     
+          
+          
+          
+          
+         
